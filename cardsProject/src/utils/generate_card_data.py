@@ -28,7 +28,7 @@ for filename in sorted(os.listdir(image_folder_path)):
 
         card = {
             "card_id": len(card_data) + 1,  
-            "card_img_src": os.path.join('./public/cards', filename),
+            "card_img_src": os.path.join('../public/cards', filename),
             "card_name": name,
             "card_number": card_number,
             "card_suit": card_suit
@@ -39,7 +39,7 @@ for filename in sorted(os.listdir(image_folder_path)):
         card_suit = parts[1]
         card = {
             "card_id": len(card_data) + 1, 
-            "card_img_src": os.path.join('./public/cards', filename),
+            "card_img_src": os.path.join('../public/cards', filename),
             "card_name": name,
             "card_number": card_number,
             "card_suit": card_suit
