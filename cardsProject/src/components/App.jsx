@@ -11,8 +11,7 @@ function App() {
   const [cards, setCards] = useState([])
 
   useEffect(() => {
-    // Fetch the JSON data from the file
-    fetch('/cards.json') // Adjust the path as needed
+    fetch('/cards.json')
       .then((response) => response.json())
       .then((data) => setCards(data))
       .catch((error) => console.error('Error fetching data:', error))
@@ -23,9 +22,9 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<CardContainer cards={cards} />} />
-        <Route path="durak" element={Durak} />
-        <Route path="poker" element={Poker} />
-        <Route path="patience" element={Patience} />
+        <Route path="durak" element={<Durak />} />
+        <Route path="poker" element={<Poker />} />
+        <Route path="patience" element={<Patience />} />
       </Routes>
     </Router>
   )

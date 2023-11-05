@@ -6,21 +6,29 @@
   color: #fff;
   text-align: center;
   height: 90px;
-  width: 100vw;
+  width: 100%;
   align-items: center;
   margin-bottom: 40px;
-  transition: box-shadow 0.3s; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0); 
+  transition: box-shadow 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0);
 }
 
 .header:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .nav-link {
   text-decoration: none;
-  color: #fff; 
-  font-size: 32px; 
-  margin-left: 180px;
-  margin-right: 180px;
+  color: #fff;
+  font-size: 32px;
+  margin-left: 13%;
+  margin-right: 13%;
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    font-size: 23px;
+    margin-left: 9%;
+    margin-right: 9%;
+  }
 }

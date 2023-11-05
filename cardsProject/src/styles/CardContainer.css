@@ -1,4 +1,3 @@
-
 .card-container-wrapper {
   display: flex;
   justify-content: center;
@@ -38,7 +37,7 @@
 
 .card a {
   text-decoration: none;
-  color: #007BFF;
+  color: #007bff;
   font-weight: bold;
   display: block;
 }
