@@ -1,0 +1,26 @@
+.header {
+  background-color: #232222;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  text-align: center;
+  height: 90px;
+  width: 100vw;
+  align-items: center;
+  margin-bottom: 40px;
+  transition: box-shadow 0.3s; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0); 
+}
+
+.header:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff; 
+  font-size: 32px; 
+  margin-left: 180px;
+  margin-right: 180px;
+}

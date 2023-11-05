@@ -1,33 +1,34 @@
-import { useEffect, useState } from 'react';
-import { Card } from './Card';
-import '../styles/App.css';
+import { useEffect, useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import '../styles/CardContainer.css'
+import { Durak } from './Durak'
+import { Patience } from './Patience'
+import { Poker } from './Poker'
+import { Header } from './Header'
+import { CardContainer } from './CardContainer'
 
 function App() {
-  const [cards, setCards] = useState([]);
+  const [cards, setCards] = useState([])
 
   useEffect(() => {
     // Fetch the JSON data from the file
     fetch('/cards.json') // Adjust the path as needed
       .then((response) => response.json())
       .then((data) => setCards(data))
-      .catch((error) => console.error('Error fetching data:', error));
-  }, []);
+      .catch((error) => console.error('Error fetching data:', error))
+  }, [])
 
   return (
-    <div className="app">
-      <div className="cards-container">
-        {cards.map((card) => (
-          <Card
-            key={card.card_id}
-            imgSrc={card.card_img_src}
-            name={card.card_name}
-            number={card.card_number}
-            suit={card.card_suit}
-          />
-        ))}
-      </div>
-    </div>
-  );
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<CardContainer cards={cards} />} />
+        <Route path="durak" element={Durak} />
+        <Route path="poker" element={Poker} />
+        <Route path="patience" element={Patience} />
+      </Routes>
+    </Router>
+  )
 }
 
-export default App;
+export default App
