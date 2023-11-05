@@ -1,0 +1,48 @@
+.poker-container {
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+}
+
+.poker-img {
+  width: 100%;
+  height: auto;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  background-color: rgba(21, 43, 37, 0.7);
+  padding: 20px;
+  max-width: 80%;
+}
+
+.text-overlay h1, .text-overlay h3, .text-overlay h6 {
+  margin: 10px 0;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .text-overlay {
+    max-width: 90%; /* Adjust the width for smaller screens */
+    padding: 10px; /* Adjust the padding for smaller screens */
+  }
+
+  .text-overlay h1 {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+
+  .text-overlay h3 {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+
+  .text-overlay h6 {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
