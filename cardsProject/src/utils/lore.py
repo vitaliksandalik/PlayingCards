@@ -1,3 +1,4 @@
+import json
 card_lore = {
   '2_of_hearts': "The 2 of Hearts is a card that embodies the essence of love and relationships. It signifies the beginning of a new emotional connection or the strengthening of an existing bond. This card represents the initial stages of falling in love, where the heart flutters with the anticipation of a deep and meaningful relationship. It encourages you to open your heart and express your feelings to someone special. The 2 of Hearts symbolizes unity, partnership, and the potential for a beautiful romantic journey. It's a reminder to cherish the simple joys of love and to nurture the affection between two people. In matters of the heart, this card signifies the promise of a loving and harmonious union.",
   '2_of_diamonds': "The 2 of Diamonds is a card that speaks to financial decisions and partnerships. It represents the need to make choices related to your material well-being and collaborate with others in business or financial endeavors. This card encourages you to carefully consider your investments and financial commitments. It symbolizes a time of balance and duality in your financial life, where you may need to weigh the pros and cons of financial decisions. The 2 of Diamonds reminds you to find common ground and work cooperatively with others in financial matters. It's a card of financial harmony and shared prosperity.",
@@ -55,5 +56,11 @@ card_lore = {
   'red_joker': "The Red Joker is a card that symbolizes playfulness and fun. It represents the spirit of laughter and joy in life. This card encourages you to enjoy the lighter side of existence and to find moments of happiness in the everyday. The Red Joker suggests that you can infuse your life with humor and merriment. It's a reminder to not take everything too seriously and to take time to appreciate the simple pleasures that bring a smile to your face."
 }
 
+file_name = "cardsProject/src/utils/card_lore.json"
 
+# Convert the dictionary to JSON format and save it to a file
+with open(file_name, "w") as file:
+    json.dump(card_lore, file, indent=2)
+
+print(f"JSON data saved to {file_name}")
 

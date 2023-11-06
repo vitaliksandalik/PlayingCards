@@ -24,10 +24,9 @@
   max-width: 80%;
 }
 
-/* Add a media query for screens with a max width of 1215px */
 @media (max-width: 1215px) {
   .card-description {
-    font-size: 20px; /* Decrease font size for smaller screens */
+    font-size: 20px; 
   }
   .card-image {
     max-width: 30%;
@@ -36,7 +35,7 @@
 
 @media (max-width: 900px) {
   .card-description {
-    font-size: 16px; /* Decrease font size for smaller screens */
+    font-size: 16px; 
   }
   .card-image {
     max-width: 25%;

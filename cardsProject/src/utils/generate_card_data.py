@@ -1,6 +1,6 @@
 import os
 import json
-from lore import card_lore
+
 
 image_folder_path = 'cardsProject/public/cards'
 
@@ -28,10 +28,12 @@ for filename in sorted(os.listdir(image_folder_path)):
         card_suit = parts[2]
         card_name = name
 
-        if card_name in card_lore:
-            lore = card_lore[card_name]
-        else:
-            lore = "No lore available for this card."
+        lore = "No lore available for this card."  # Default lore if not found in the JSON file
+
+        with open('cardsProject/src/utils/card_lore.json') as lore_file:
+            card_lore_data = json.load(lore_file)
+            if card_name in card_lore_data:
+                lore = card_lore_data[card_name]
 
         card = {
             "card_id": len(card_data) + 1,
@@ -39,7 +41,7 @@ for filename in sorted(os.listdir(image_folder_path)):
             "card_name": card_name,
             "card_number": card_number,
             "card_suit": card_suit,
-            "lore": lore,  # Add the lore key here
+            "lore": lore,
         }
         card_data.append(card)
     elif len(parts) == 2 and name != '.DS_Store':
@@ -47,10 +49,12 @@ for filename in sorted(os.listdir(image_folder_path)):
         card_suit = parts[1]
         card_name = name
 
-        if card_name in card_lore:
-            lore = card_lore[card_name]
-        else:
-            lore = "No lore available for this card."
+        lore = "No lore available for this card."  # Default lore if not found in the JSON file
+
+        with open('cardsProject/src/utils/card_lore.json') as lore_file:
+            card_lore_data = json.load(lore_file)
+            if card_name in card_lore_data:
+                lore = card_lore_data[card_name]
 
         card = {
             "card_id": len(card_data) + 1,
@@ -58,7 +62,7 @@ for filename in sorted(os.listdir(image_folder_path)):
             "card_name": card_name,
             "card_number": card_number,
             "card_suit": card_suit,
-            "lore": lore,  # Add the lore key here
+            "lore": lore,
         }
         card_data.append(card)
 
