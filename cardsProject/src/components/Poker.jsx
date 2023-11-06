@@ -1,4 +1,4 @@
-import '../styles/Poker.css';
+import '../styles/Poker.scss';
 
 export const Poker = () => {
   return (

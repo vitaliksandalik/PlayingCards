@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Card } from './Card'
-import '../styles/CardContainer.css'
+import '../styles/CardContainer.scss'
 
 export const CardContainer = ({ cards }) => {
   return (
