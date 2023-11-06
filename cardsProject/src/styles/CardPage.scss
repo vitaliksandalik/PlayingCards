@@ -1,0 +1,44 @@
+.card-container {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  margin: 20px;
+  align-items: flex-start;
+}
+
+.card-image {
+  max-width: 35%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+.card-description {
+  margin: 20px;
+  text-align: left;
+  margin-top: 10px;
+  font-size: 30px;
+  color: #ffffff;
+  max-width: 80%;
+}
+
+/* Add a media query for screens with a max width of 1215px */
+@media (max-width: 1215px) {
+  .card-description {
+    font-size: 20px; /* Decrease font size for smaller screens */
+  }
+  .card-image {
+    max-width: 30%;
+  }
+}
+
+@media (max-width: 900px) {
+  .card-description {
+    font-size: 16px; /* Decrease font size for smaller screens */
+  }
+  .card-image {
+    max-width: 25%;
+  }
+}

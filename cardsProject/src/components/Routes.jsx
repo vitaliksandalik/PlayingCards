@@ -13,7 +13,7 @@ export const AppRoutes = ({ cards }) => (
       <Route
         key={card.card_id}
         path={`/card/${card.card_name}`}
-        element={<CardPage imgSrc={card.card_img_src} name={card.card_name} number={card.card_number} suit={card.card_suit} />}
+        element={<CardPage imgSrc={card.card_img_src} name={card.card_name} number={card.card_number} suit={card.card_suit} lore={card.lore}/>}
       />
     ))}
     <Route path="durak" element={<Durak />} />

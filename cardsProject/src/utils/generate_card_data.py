@@ -1,5 +1,6 @@
 import os
 import json
+from lore import card_lore
 
 image_folder_path = 'cardsProject/public/cards'
 
@@ -25,24 +26,39 @@ for filename in sorted(os.listdir(image_folder_path)):
     if len(parts) >= 3:
         card_number = parts[0]
         card_suit = parts[2]
+        card_name = name
+
+        if card_name in card_lore:
+            lore = card_lore[card_name]
+        else:
+            lore = "No lore available for this card."
 
         card = {
-            "card_id": len(card_data) + 1,  
+            "card_id": len(card_data) + 1,
             "card_img_src": os.path.join('../public/cards', filename),
-            "card_name": name,
+            "card_name": card_name,
             "card_number": card_number,
-            "card_suit": card_suit
+            "card_suit": card_suit,
+            "lore": lore,  # Add the lore key here
         }
         card_data.append(card)
     elif len(parts) == 2 and name != '.DS_Store':
         card_number = parts[0]
         card_suit = parts[1]
+        card_name = name
+
+        if card_name in card_lore:
+            lore = card_lore[card_name]
+        else:
+            lore = "No lore available for this card."
+
         card = {
-            "card_id": len(card_data) + 1, 
+            "card_id": len(card_data) + 1,
             "card_img_src": os.path.join('../public/cards', filename),
-            "card_name": name,
+            "card_name": card_name,
             "card_number": card_number,
-            "card_suit": card_suit
+            "card_suit": card_suit,
+            "lore": lore,  # Add the lore key here
         }
         card_data.append(card)
 

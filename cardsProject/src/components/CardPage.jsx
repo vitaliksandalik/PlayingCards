@@ -1,14 +1,13 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
+import '../styles/CardPage.scss'
 
-export const CardPage = ({ imgSrc, name, number, suit }) => {
+export const CardPage = ({ imgSrc, name, number, suit, lore }) => {
   console.log(imgSrc)
   return (
-    <div className="card">
-      
-      <img src={imgSrc} alt={name} />
-      <h1>
-        {number} of {suit}
-      </h1>
+    <div className="card-container">
+      <img className="card-image" src={imgSrc} alt={name} />
+      <p className="card-description">{lore}</p>
     </div>
-  );
-};
+  )
+}
