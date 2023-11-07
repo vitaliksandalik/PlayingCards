@@ -2,9 +2,9 @@ import '../styles/Patience.scss';
 
 export const Patience = () => {
   return (
-    <div className="poker-container">
+    <div className="patience-container">
       <div className="image-container">
-        <img src="../public/poker.png" className='poker-img' alt="Poker Image" />
+        <img src="../public/patience.png" className='poker-img' alt="Poker Image" />
         <div className="text-overlay">
           <h1>LEARN TO PLAY</h1>
           <h3>Basics of Patience</h3>
